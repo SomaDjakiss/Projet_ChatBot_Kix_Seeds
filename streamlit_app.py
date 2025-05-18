@@ -6,20 +6,13 @@ from collections import defaultdict
 from itertools import islice
 from langchain.prompts import PromptTemplate
 from langchain.chat_models import ChatOpenAI
-#from langchain.chat_models import ChatOpenAI
-from proccessing import get_df_merge_final
+
 
 st.set_page_config(page_title="🎓 Analyse Scolaire", layout="centered")
 st.title("🎓 Chatbot Scolaire - Analyse des Performances")
 
 # ✅ Chargement et cache des données
-@st.cache_data
-def load_data():
-    return get_df_merge_final()
-    
-
-df = load_data()
-
+df=pd.read_csv("https://github.com/SomaDjakiss/Projet_ChatBot_Kix_Seeds/data_kix_seeds.csv")
 # ✅ Chargement de la clé API OpenAI depuis les secrets Streamlit
 openai_api_key = st.secrets["OPENAI_API_KEY"]
 
