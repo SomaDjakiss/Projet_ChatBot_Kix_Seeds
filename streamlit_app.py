@@ -1,10 +1,9 @@
 import os
 import re
-import pickle
 import streamlit as st
 from collections import defaultdict
 from itertools import islice
-from langchain.prompts import PromptTemplate
+from langchain_core.prompts import PromptTemplate
 from langchain.chat_models import ChatOpenAI
 
 
