@@ -12,7 +12,7 @@ st.set_page_config(page_title="🎓 Analyse Scolaire", layout="centered")
 st.title("🎓 Chatbot Scolaire - Analyse des Performances")
 
 # ✅ Chargement et cache des données
-df=pd.read_csv("https://raw.githubusercontent.com/SomaDjakiss/Projet_ChatBot_Kix_Seeds/main/data_proccessing.csv",encoding="ISO-8859-1",sep=";")
+df=pd.read_csv("https://raw.githubusercontent.com/SomaDjakiss/Projet_ChatBot_Kix_Seeds/main/data_kix_seeds.csv",encoding="ISO-8859-1",sep=";")
 # ✅ Chargement de la clé API OpenAI depuis les secrets Streamlit
 openai_api_key = st.secrets["OPENAI_API_KEY"]
 
